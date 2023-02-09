@@ -1,3 +1,14 @@
+body {
+  box-sizing: border-box;
+  background-color: #fafafa;
+  letter-spacing: -0.3px;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: open sans, Helvetica, Arial, sans-serif;
+}
+
 .App {
   text-align: center;
 }
@@ -34,5 +45,35 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+/* ------ */
+.layout-dashboard {
+  background: transparent;
+  text-align: left;
+  position: relative;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+@media (min-width: 992px) {
+  .layout-dashboard {
+    overflow: auto;
+  }
+  .layout-dashboard .ant-layout-footer {
+    margin: 0 0 20px 20px;
+  }
+  .layout-dashboard .ant-layout-sider.sider-primary {
+    margin: 20px 0 0 20px;
+    padding: 13px 20px;
+    height: calc(100vh - 20px);
+  }
+  .layout-dashboard .ant-layout {
+    width: auto;
+    flex-shrink: 1;
+    margin-right: 270px;
+  }
+  .layout-dashboard .header-control .sidebar-toggler {
+    display: none;
   }
 }
