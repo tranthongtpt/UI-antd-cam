@@ -73,6 +73,28 @@ body {
   .icon {
   background-color: #1890ff;
 }
+.gutter-col{
+  max-width: 100%;
+}
+.input-group{
+  top: 20px;
+}
+.p-10{
+  padding-top: 10px;
+}
+.t-100{
+  top: 200px
+}
+.t-200{
+  top: 300px
+}
+.icon-footer{
+  color: #282c34;
+}
+.icon-footer:hover{
+  color: #1890ff;
+}
+
 @media (min-width: 992px) {
   .layout-dashboard {
     overflow: auto;

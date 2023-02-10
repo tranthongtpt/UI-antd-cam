@@ -18,7 +18,6 @@ const contentStyle = {
   lineHeight: '120px',
   color: '#fff',
   backgroundColor: '#ccc',
-  border:'4px solid #faad14'
 };
 const siderStyle = {
   textAlign: 'center',
@@ -33,11 +32,46 @@ const footerStyle = {
   backgroundColor: '#f5f5f5',
   zIndex: 9
 };
+const style = {
+    background: '#fff',
+    height:'100%',
+    border:'4px solid #faad14'
+  };
 const onSearch = (value) => console.log(value);
 const Dashboard = () => (
     <Layout className='layout-dashboard'>
         <Layout>
-          <Content style={contentStyle}></Content>
+          <Content style={contentStyle}>
+            <Row gutter={[8, 8]} style={{height:'100%',rowGap:'7px'}}>
+                <Col className="gutter-row pr-0" span={8}>
+                    <div style={style}>col-6</div>
+                </Col>
+                <Col className="gutter-row pr-0" span={8}>
+                    <div style={style}>col-6</div>
+                </Col>
+                <Col className="gutter-row pr-0" span={8}>
+                    <div style={style}>col-6</div>
+                </Col>
+                <Col className="gutter-row pr-0" span={8}>
+                    <div style={style}>col-6</div>
+                </Col>
+                <Col className="gutter-row pr-0" span={8}>
+                    <div style={style}>col-6</div>
+                </Col>
+                <Col className="gutter-row pr-0" span={8}>
+                    <div style={style}>col-6</div>
+                </Col>
+                <Col className="gutter-row pr-0" span={8}>
+                    <div style={style}>col-6</div>
+                </Col>
+                <Col className="gutter-row pr-0" span={8}>
+                    <div style={style}>col-6</div>
+                </Col>
+                <Col className="gutter-row pr-0" span={8}>
+                    <div style={style}>col-6</div>
+                </Col>
+            </Row>
+          </Content>
           <Sider className="sider-primary ant-layout-sider-primary">
             < Search
             placeholder = "input search text"
@@ -111,8 +145,7 @@ const Dashboard = () => (
                 size="middle"
                 style={{
                   display: 'flex',
-                  justifyContent: 'flex-end',
-                  
+                  justifyContent: 'flex-end'
                 }}
                 >
                       @Nocopyright cvs
