@@ -1,7 +1,8 @@
 import React from 'react';
     import { Layout, Space, Col, Divider, Row,Input ,Button,FloatButton  ,Tooltip  } from 'antd';
     import { BorderOutlined,AppstoreOutlined,TableOutlined,CommentOutlined, EyeOutlined  } from "@ant-design/icons";
-    import DashboardWrapper from './DashboardWrapper';
+import Sidenav from '../components/Layout/Sidenav';
+import Footerr from '../components/Layout/Footer';
 const { Header, Footer, Sider, Content } = Layout;
 const { Search,TextArea } = Input;
 
@@ -28,16 +29,15 @@ const siderStyle = {
   backgroundColor: '#3ba0e9',
   width:'100%'
 };
-const footerStyle = {
-  textAlign: 'center',
-  color: '#fff',
-  backgroundColor: '#f5f5f5',
-  zIndex: 9
-};
+
 const onSearch = (value) => console.log(value);
-const Dashboard = () => (
-  <DashboardWrapper>
-     <div></div>
-  </DashboardWrapper>
+const DashboardWrapper = ({children}) => (
+    <Layout className='layout-dashboard'>
+        <Layout>
+          <Content style={contentStyle}>{children}</Content>
+          <Sidenav/>
+        </Layout>
+        <Footerr/>
+    </Layout>
 );
-export default Dashboard;
+export default DashboardWrapper;

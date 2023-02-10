@@ -94,6 +94,89 @@ body {
 .icon-footer:hover{
   color: #1890ff;
 }
+.zoom {
+  background: green;
+  transition: transform .2s;
+}
+.eff-z1:hover {
+  transform: scale(1.5) translate(136px, 70px);
+  background-color: #1890ff;
+}
+.eff-z2:hover{
+  transform: scale(1.5) translate(-136px, 70px);
+  background-color: #1890ff;
+}
+.eff-z3:hover{
+  transform: scale(1.5) translate(136px, -70px);
+  background-color: #1890ff;
+}
+.eff-z4:hover{
+  transform: scale(1.5) translate(-136px, -70px);
+  background-color: #1890ff;
+}
+.eff9-z:hover{
+  transform: scale(1.5) translate(90px, 46px);
+  background-color: #1890ff;
+}
+.eff9-z1:hover{
+  transform:scale(1.5) translate(26px, 47px);
+  background-color: #1890ff;
+}
+.eff9-z2:hover{
+  transform:scale(1.5) translate(-90px, 47px);
+  background-color: #1890ff;
+}
+.eff9-z3:hover{
+  transform:scale(1.5) translate(90px, 12px);
+  background-color: #1890ff;
+}
+.eff9-z4:hover{
+  transform:scale(1.5) translate(4px, 12px);
+  background-color: #1890ff;
+}
+.eff9-z5:hover{
+  transform:scale(1.5) translate(-90px, 47px);
+  background-color: #1890ff;
+}
+.eff9-z6:hover{
+  transform:scale(1.5) translate(90px, -45px);
+  background-color: #1890ff;
+}
+.eff9-z7:hover{
+  transform:scale(1.5) translate(-26px, -45px);
+  background-color: #1890ff;
+}
+.eff9-z8:hover{
+  transform:scale(1.5) translate(-90px, -47px);
+  background-color: #1890ff;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: #fff;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  gap: 10px;
+}
+.grid-container-more {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #fff;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  gap: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid rgba(218, 196, 4, 0.897);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
 
 @media (min-width: 992px) {
   .layout-dashboard {
@@ -253,3 +336,138 @@ i {
   top: 39%;
   left: 42%;
 }
+
+/*Menu float button*/
+.label-container{
+  position:fixed;
+  bottom:48px;
+  right:105px;
+  display:table;
+  visibility: hidden;
+}
+
+.label-text{
+  color:#FFF;
+  background:rgba(51,51,51,0.5);
+  display:table-cell;
+  vertical-align:middle;
+  padding:10px;
+  border-radius:3px;
+}
+
+.label-arrow{
+  display:table-cell;
+  vertical-align:middle;
+  color:#333;
+  opacity:0.5;
+}
+
+.float{
+  position:fixed;
+  width:40px;
+  height:40px;
+  bottom:15px;
+  left:40px;
+  background-color:white;
+  color:'#00000';
+  border-radius:50px;
+  text-align:center;
+  box-shadow: 2px 2px 3px #999;
+  z-index:1000;
+  animation: bot-to-top 2s ease-out;
+}
+
+
+/*Home menu*/
+.menux {
+  position:fixed;
+  z-index:100;
+  top:27%;
+  left:35%;
+  opacity: 0;
+}
+/*End Home menu*/
+
+
+/*Float Button*/
+.float-menu{
+  position:fixed;
+  left:1px;
+  padding-bottom:20px;
+  bottom:40px;
+  z-index:100;
+}
+
+.sub-menu{
+  list-style:none;
+  margin-bottom:10px;
+}
+
+.menu-link{
+  background-color:#ffff;
+  color:blue;
+  border-radius:30px;
+  text-align:center;
+  box-shadow: 2px 2px 3px #999;
+  width:40px;
+  height:40px;
+  display:block;
+}
+
+ul:hover{
+  visibility:visible!important;
+  opacity:1!important;
+}
+
+.my-float{
+  font-size:24px;
+  margin-top:8px;
+}
+
+a#menu-share + ul{
+visibility: hidden;
+}
+
+a#menu-share:hover + ul{
+visibility: visible;
+animation: scale-in 0.5s;
+}
+
+a#menu-share i{
+  animation: rotate-in 0.5s;
+}
+
+a#menu-share:hover > i{
+  animation: rotate-out 0.5s;
+}
+
+a#sub-menu i{
+  animation: rotate-in 0.5s;
+}
+
+.sub-menu:hover{
+  animation: rotate-out 0.5s;
+}
+
+@keyframes bot-to-top {
+  0%   {bottom:-60px}
+  50%  {bottom:40px}
+}
+
+@keyframes scale-in {
+  from {transform: scale(0);opacity: 0;}
+  to {transform: scale(1);opacity: 1;}
+}
+
+@keyframes rotate-in {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+@keyframes rotate-out {
+  from {transform: rotate(360deg);}
+  to {transform: rotate(0deg);}
+}
+
+
+/*End Menu float Button*/
